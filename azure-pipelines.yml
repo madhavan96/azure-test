@@ -25,3 +25,8 @@ steps:
       echo Write your commands here
       
       echo Hello world
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Pipeline.Workspace)'
+    artifact: 'build'
+    publishLocation: 'pipeline'
